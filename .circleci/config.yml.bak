@@ -1,0 +1,8 @@
+jobs:
+  build:
+    docker:
+      - Dockerfile
+    steps:
+      - checkout
+      - run: yanr
+      - run: 

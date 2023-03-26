@@ -1,0 +1,9 @@
+jobs:
+  build:
+    docker:
+      - Dockerfile
+    steps:
+      - checkout
+      - run: apt install imagemagick git nodejs ffmpeg libwebp mc nano yarn
+      - run: yarn
+      - npm start
