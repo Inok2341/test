@@ -4,6 +4,6 @@ jobs:
       - image: cimg/base:2023.03
     steps:
       - checkout
-      - run: apt install -y imagemagick git nodejs ffmpeg libwebp mc nano yarn
+      - run: sudo apt install -y imagemagick git nodejs ffmpeg libwebp mc nano yarn
       - run: yarn
       - run: npm start
