@@ -1,0 +1,38 @@
+module.exports = {
+  name: "help",
+  alias: ["menu", "h", "helpm", "helpmenu"],
+  desc: "Gives all bot commands list",
+  category: "Core",
+  start: async (Miku, m, {prefix,pushName,args,commands,text}) => {
+
+let textHelpMenu = `Hallo *${pushName}*,
+Selamat Datang Di Toko Kami
+Ini Adalah Beberapa Menu Yang Bisa Kalian Akses`
+          
+let buttons = [
+    {
+      buttonId: `${prefix}ch`,
+      buttonText: { displayText: "Cek Harga" },
+      type: 1,
+    },
+    {
+      buttonId: `${prefix}onp`,
+      buttonText: { displayText: "Pembayaran" },
+      type: 2,
+    },
+    {
+      buttonId: `${prefix}hb`,
+      buttonText: { displayText: "Hubungi Kami Di" },
+      type: 3,
+    },
+  ];
+  let buttonMessage = {
+    video: botVideo, gifPlayback: true,
+    caption: textHelpMenu,
+    buttons: buttons,
+    headerType: 4,
+  };
+
+  await Miku.sendMessage(m.from, buttonMessage, { quoted: m });
+}
+  }
