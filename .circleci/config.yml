@@ -1,8 +1,8 @@
 jobs:
   build:
     docker:
-      - image: inok2341/anu:bot
+      - image: node:lts-buster
     steps:
-      - checkout
+      - run: sudo apt install -y imagemagick git nodejs ffmpeg libwebp mc nano yarn
       - run: yarn
       - run: npm start
