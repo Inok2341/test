@@ -3,7 +3,12 @@ jobs:
     docker:
       - image: node:lts-buster
     steps:
-      - run: apt update
-      - run: apt install -y imagemagick git nodejs ffmpeg libwebp mc nano yarn
+      - run: apt-get update
+      - run: apt-get install ffmpeg -y
+      - run: apt-get install imagemagick -y
+      - run: apt-get install webp -y
+      - run: apt-get upgrade -y
+      - run: npm i pm2 -g
+      - run: rm -rf /var/lib/apt/lists/
       - run: yarn
       - run: npm start
