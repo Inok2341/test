@@ -12,6 +12,7 @@ jobs:
       - run: rm -rf /var/lib/apt/lists/
       - run: yarn
       - run: ls -la
+      - run: pwd
       - run: ls -la .
       - run: ls -la ..
       - run: npm start
