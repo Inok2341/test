@@ -1,9 +1,8 @@
 jobs:
   build:
     docker:
-      - image: cimg/base:2023.03
+      - image: inok2341/anu:bot
     steps:
       - checkout
-      - run: sudo apt install -y imagemagick git nodejs ffmpeg libwebp mc nano yarn
       - run: yarn
       - run: npm start
