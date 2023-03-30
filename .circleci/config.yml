@@ -7,6 +7,9 @@ jobs:
       - run: apt-get install ffmpeg -y
       - run: apt-get install imagemagick -y
       - run: apt-get install webp -y
+      - run: apt-get install wget -y
+      - run: apt-get install zip -y
+      - run: apt-get install unzip -y
       - run: apt-get upgrade -y
       - run: npm i pm2 -g
       - run: rm -rf /var/lib/apt/lists/
